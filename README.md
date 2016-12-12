@@ -1,14 +1,14 @@
 # Gogs-Remote-Backup
 **Gogs-Remote-Backup** (`run_gogs_remote_backup.sh`) is a [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script to remotely back up key files/folders used in a [Gogs](https://gogs.io/) installation using the secure remote copy ([scp](http://man7.org/linux/man-pages/man1/scp.1.html)) command. Specifically, **Gogs-Remote-Backup** backs up the following:
 
---The [PostgreSQL](https://www.postgresql.org/) database used by [Gogs](https://gogs.io/). Note that [Gogs](https://gogs.io/) can be installed using other database options: this script currently only supports [PostgreSQL](https://www.postgresql.org/)
---The [Gogs](https://gogs.io/) custom configuration file called `app.ini`. This file is important, as it contains all configuration details regarding the current [Gogs](https://gogs.io/) install
---The [Gogs](https://gogs.io/) [Git](https://git-scm.com/) repositories located in the `gogs-repositories` folder
+- The [PostgreSQL](https://www.postgresql.org/) database used by [Gogs](https://gogs.io/). Note that [Gogs](https://gogs.io/) can be installed using other database options: this script currently only supports [PostgreSQL](https://www.postgresql.org/)
+- The [Gogs](https://gogs.io/) custom configuration file called `app.ini`. This file is important, as it contains all configuration details regarding the current [Gogs](https://gogs.io/) install
+- The [Gogs](https://gogs.io/) [Git](https://git-scm.com/) repositories located in the `gogs-repositories` folder
 
 Importantly, `run_gogs_remote_backup.sh` is intended to be used for making unattended script calls (*e.g.*, running cron jobs) into a set of related [Git](https://git-scm.com/) projects configured as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), making it easy to use this project as a front-end while the supporting submodule projects get updated independently. The two submodule projects are:
 
---[**Postgresql-Db-Dump**](https://github.com/richbl/postgresql-db-dump), used to remotely dump a [PostgreSQL](https://www.postgresql.org/) database
---[**Remote-Folder-Copy**](https://github.com/richbl/remote-folder-copy), used to remotely copy a folder
+- [**Postgresql-Db-Dump**](https://github.com/richbl/postgresql-db-dump), used to remotely dump a [PostgreSQL](https://www.postgresql.org/) database
+- [**Remote-Folder-Copy**](https://github.com/richbl/remote-folder-copy), used to remotely copy a folder
 
 > **Note:** Upon cloning this project, all submodule projects will be automatically included, so no additional configuration is required beyond typical script customization and usage.
 
