@@ -10,22 +10,22 @@ Importantly, `run_gogs_remote_backup.sh` is intended to be used for making unatt
 - [**Postgresql-Db-Dump**](https://github.com/richbl/postgresql-db-dump), used to remotely dump a [PostgreSQL](https://www.postgresql.org/) database
 - [**Remote-Folder-Copy**](https://github.com/richbl/remote-folder-copy), used to remotely copy a folder
 
-> **Note:** Upon cloning this project, all submodule projects will be automatically included, so no additional configuration is required beyond typical script customization and usage.
+> **Note:** Upon cloning this project, all submodule projects will be automatically included, so no additional configuration is required beyond typical script customization.
 
 
 ## Requirements
 
- - An operational [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) environment (bash 4.3.2 used during development)
+ - An operational [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) environment (bash 4.3.46 used during development)
  -  The requirements of each of the two submodule projects used in this project. Note that each submodule project will alert the user to missing dependencies at runtime
 
-While this package was written and tested under Linux (Ubuntu 15.10), there should be no reason why this won't work under other Unix-like operating systems.
+While this package was written and tested under Linux (Ubuntu 16.10), there should be no reason why this won't work under other Unix-like operating systems.
 
 ## Basic Usage
 
 Be sure to review and edit the contents of the **Gogs-Remote-Backup** script (`run_gogs_remote_backup.sh`) to customize script parameters and folder options.
 
-> **Note:** **Gogs-Remote-Backup** really only serves as a wrapper for [**Postgresql-Db-Dump**](https://github.com/richbl/postgresql-db-dump) and [**Remote-Folder-Copy**](https://github.com/richbl/remote-folder-copy), so a good understanding of the parameters passed into these scripts is critical.
+> **Note:** **Gogs-Remote-Backup** really only serves as a wrapper for [**Postgresql-Db-Dump**](https://github.com/richbl/postgresql-db-dump) and [**Remote-Folder-Copy**](https://github.com/richbl/remote-folder-copy), so a good understanding of the parameters passed into these scripts is important.
 
-Because **Gogs-Remote-Backup** is intended to run unattended, the only usage is to called the script directly, with no additional parameters pass on the command line.
+Because **Gogs-Remote-Backup** is intended to run unattended, the only usage is to call the script directly, with no additional parameters passed on the command line.
 
     $ ./run_gogs_remote_backup.sh 
