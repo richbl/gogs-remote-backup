@@ -12,7 +12,7 @@ Importantly, `run_gogs_remote_backup.sh` is intended to be used for making unatt
 - [**Postgresql-Db-Dump**](https://github.com/richbl/postgresql-db-dump), used to remotely dump a [PostgreSQL](https://www.postgresql.org/) database
 - [**Remote-Folder-Copy**](https://github.com/richbl/remote-folder-copy), used to remotely copy a folder
 
-> **Note:** Upon cloning this project, all submodule projects will be automatically included, so no additional configuration is required beyond typical script customization.
+> **IMPORTANT:** Be sure to clone this project with the `--recursive` switch (`git clone --recursive git@github.com:richbl/gogs-remote-backup.git`) so all submodule projects will be automatically cloned as well. If you clone into this project without this switch, you'll see empty submodule project folders.
 
 
 ## Requirements
@@ -30,4 +30,4 @@ Be sure to review and edit the contents of the **Gogs-Remote-Backup** script (`r
 
 Because **Gogs-Remote-Backup** is intended to run unattended, the only usage is to call the script directly, with no additional parameters passed on the command line.
 
-    $ ./run_gogs_remote_backup.sh 
+    $ ./run_gogs_remote_backup.sh
