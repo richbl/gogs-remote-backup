@@ -17,7 +17,7 @@
 #
 # A bash script to remotely backup files from a Gogs (https://github.com/gogits/gogs) install
 #
-# Version: 0.1.0
+# Version: 0.2.0
 #
 # Requirements:
 #
@@ -34,12 +34,18 @@
 #  --None (side effect is the completion of the called script(s))
 #
 
+DEST_DIRNAME='gogs_backup-'$(date +"%Y%m%d%H%M%S")
+EXEC_DIR="/home/USER/bash_scripts/gogs-remote-backup"
+DEST_DIR='/home/USER/projects/gogs_backups/'${DEST_DIRNAME}
+
+mkdir -p ${DEST_DIR}
+
 # Backup Gogs database (see submodule project for arguments passed)
 #
-/bin/bash ./postgresql-db-dump/postgres_db_dump.sh -h EXAMPLE.COM -u USERNAME -p 'PASSWORD' -d GOGS_DATABASE -o . &&
+/bin/bash ${EXEC_DIR}/postgresql-db-dump/postgres_db_dump.sh -h EXAMPLE.COM -u USERNAME -p 'PASSWORD' -d GOGS_DATABASE -o ${DEST_DIR} &&
 
 # Backup Gogs repos folder (gogs-repositories) and Gogs custom conf folder (app.ini)
 # (see submodule project for arguments passed)
 #
-/bin/bash ./remote-folder-copy/remote_folder_copy.sh -u USERNAME -p 'PASSWORD' -w EXAMPLE.COM -P 1234 -s /home/GIT_USER/gogs-repositories -d . &&
-/bin/bash ./remote-folder-copy/remote_folder_copy.sh -u USERNAME -p 'PASSWORD' -w EXAMPLE.COM -P 1234 -s /home/GIT_USER/gogs/custom/conf -d .
+/bin/bash ${EXEC_DIR}/remote-folder-copy/remote_folder_copy.sh -u USERNAME -p 'PASSWORD' -w EXAMPLE.COM -P 1234 -s /home/GIT_USER/gogs-repositories -d ${DEST_DIR} &&
+/bin/bash ${EXEC_DIR}/remote-folder-copy/remote_folder_copy.sh -u USERNAME -p 'PASSWORD' -w EXAMPLE.COM -P 1234 -s /home/GIT_USER/gogs/custom/conf -d ${DEST_DIR}
