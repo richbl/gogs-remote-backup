@@ -1,0 +1,6 @@
+[submodule "postgresql-db-dump"]
+	path = postgresql-db-dump
+	url = git@github.com:richbl/postgresql-db-dump.git
+[submodule "remote-folder-copy"]
+	path = remote-folder-copy
+	url = git@github.com:richbl/remote-folder-copy.git
