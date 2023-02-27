@@ -30,7 +30,8 @@ Because **Gogs-Remote-Backup** is intended to run unattended, the only usage is 
     $ ./run_gogs_remote_backup.sh
     
 
-## IMPORTANT: This Project Uses Git Submodules  <a><img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150" /></a>
+## IMPORTANT: This Project Uses Git Submodules  [<img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150" />](#)
+
  
 This project uses a Git [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) project, specifically the `postgresql-db-dump` and the `remote-folder-copy` folders to keep this project up-to-date without manual intervention.
 
