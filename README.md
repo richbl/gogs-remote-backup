@@ -28,7 +28,6 @@ Be sure to review and edit the contents of the **Gogs-Remote-Backup** script (`r
 Because **Gogs-Remote-Backup** is intended to run unattended, the only usage is to call the script directly, with no additional parameters passed on the command line.
 
     $ ./run_gogs_remote_backup.sh
-    
 
 ## IMPORTANT: This Project Uses Git Submodules <picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"></picture>
 
