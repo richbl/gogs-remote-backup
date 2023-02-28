@@ -29,9 +29,9 @@ Because **Gogs-Remote-Backup** is intended to run unattended, the only usage is 
 
     $ ./run_gogs_remote_backup.sh
 
-## IMPORTANT WHEN CLONING: This Project Uses Git Submodules <picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"></picture>
+## IMPORTANT: This Project Uses Git Submodules <picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"></picture>
 
-This project uses Git [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) (located in the `postgresql-db-dump` and the `remote-folder-copy` folders) to keep this project up-to-date without manual intervention.
+This project uses [Git submodule projects](https://git-scm.com/book/en/v2/Git-Tools-Submodules) (located in the `postgresql-db-dump` and the `remote-folder-copy` folders) to keep this project up-to-date without manual intervention.
 
-So be sure to clone this project with the `--recursive` switch (`git clone --recursive https://github.com/richbl/this_project`) so any submodule project(s) will be automatically cloned as well. If you clone into this project without this switch, you'll likely see empty submodule project folders (depending on your version of Git).
+**Be sure to clone this project with the `--recursive` switch** (`git clone --recursive https://github.com/richbl/this_project`) so any submodule project(s) will be automatically cloned as well. If you clone into this project without this switch, you'll likely see empty submodule project folders (depending on your version of Git).
 
